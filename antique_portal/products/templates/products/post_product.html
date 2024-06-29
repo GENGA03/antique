@@ -1,0 +1,15 @@
+<h2>Post Antique Product</h2>
+<form method="post" enctype="multipart/form-data">
+    
+
+    <!-- {% csrf_token %} -->
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description"></textarea><br>
+    <label for="starting_price">Starting Price:</label><br>
+    <input type="text" id="starting_price" name="starting_price"><br>
+    <label for="image">Image:</label><br>
+    <input type="file" id="image" name="image"><br><br>
+    <input type="submit" value="Post">
+</form>

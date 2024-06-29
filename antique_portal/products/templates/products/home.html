@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antique Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        li {
+            background-color: #f0eaea;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #777;
+            margin-bottom: 8px;
+        }
+        img {
+            display: block;
+            margin-top: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antique Products</h1>
+    <ul>
+    {% for product in products %}
+        <li>
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.description }}</p>
+            <p>Starting Price: {{ product.starting_price }}</p>
+            <img src="{{ product.image.url }}" alt="{{ product.title }} image" width="100" height="100">
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
